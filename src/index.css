@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #0D1B2A;
+  --color-saffron: #FF6B35;
+  --color-gold: #F7C59F;
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-white font-sans;
+  }
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+}
+
+.saffron-gradient {
+  @apply bg-gradient-to-br from-saffron to-[#FF8C61];
+}
+
+.navy-gradient {
+  @apply bg-gradient-to-b from-[#1B263B] to-navy;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-navy;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/20 rounded-full;
+}
